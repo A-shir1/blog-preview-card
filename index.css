@@ -1,0 +1,123 @@
+:root{
+    --yellow: hsl(47, 88%, 63%);
+    --d-grey: hsl(0, 0%, 7%);
+    --l-grey: hsl(0, 0%, 42%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html{
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Figtree", sans-serif;
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--yellow);
+}
+
+
+/* main{
+    background-color: red;
+} */
+
+#card{
+    padding: 20px 0 20px 0;
+    background-color: var(--white);
+    width: 384px;
+    height: 522px;
+    border-radius: 20px;
+    border: 1px solid var(--d-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.wrapper{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+    
+}
+
+.cover-image{
+    height: 200px;
+    border-radius: 10px;
+    margin: 0;
+    background-image: url("assets/images/illustration-article.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.heading{
+    font-size: 24px;
+    transition: all 0.2s;
+}
+
+.heading:hover{
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.tag{
+    font-weight: bold;
+    background-color: var(--yellow);
+    width: fit-content;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    /* margin-bottom: 2rem; */
+}
+
+.desc{
+    color: var(--l-grey);
+}
+
+.author{
+    /* background-color: red; */
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.author .dp{
+    background-image: url("/assets/images/image-avatar.webp");
+    background-position: center;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    /* border: 5px solid black; */
+    border-radius: 50%;
+}
+
+.author .name{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+    #card{
+        width: 300px;
+    }
+    
+    .author{
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #card{
+        width: 280px;
+    }
+}
